@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Match - Ligue des Champions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="match-detail.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="back-btn">← Retour aux matchs</a>
+                <h1>⚽ Détail du Match</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="match-detail-container">
+                <!-- Score Section -->
+                <section class="match-header-detail">
+                    <div class="teams-header">
+                        <div class="team-header-detail">
+                            <div class="team-logo-detail" id="homeTeamLogo">🔴</div>
+                            <h2 id="homeTeamName">Manchester City</h2>
+                        </div>
+                        <div class="score-detail">
+                            <div class="score-big" id="homeScore">2</div>
+                            <div class="separator-detail">-</div>
+                            <div class="score-big" id="awayScore">1</div>
+                        </div>
+                        <div class="team-header-detail">
+                            <div class="team-logo-detail" id="awayTeamLogo">⚪</div>
+                            <h2 id="awayTeamName">Real Madrid</h2>
+                        </div>
+                    </div>
+                    <div class="match-info-detail">
+                        <span id="matchTime">45'</span>
+                        <span id="matchStatus">EN DIRECT</span>
+                        <span id="matchStadium">Etihad Stadium</span>
+                    </div>
+                </section>
+
+                <!-- Tabs Navigation -->
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="composition">📋 Composition</button>
+                    <button class="tab-btn" data-tab="stats">📊 Statistiques</button>
+                    <button class="tab-btn" data-tab="timeline">⏱️ Événements</button>
+                    <button class="tab-btn" data-tab="comments">💬 Commentaires</button>
+                </div>
+
+                <!-- Composition Tab -->
+                <section id="composition" class="tab-content active">
+                    <div class="compositions-container">
+                        <div class="team-composition">
+                            <h3 id="homeTeamCompositionTitle">Manchester City</h3>
+                            <div class="formation" id="homeFormation">4-3-3</div>
+                            
+                            <div class="team-players">
+                                <div class="goalkeeper-section">
+                                    <h4>🧤 Gardien</h4>
+                                    <div class="player" id="homeGK">
+                                        <span class="player-number">1</span>
+                                        <span class="player-name">Ederson</span>
+                                    </div>
+                                </div>
+
+                                <div class="players-section">
+                                    <h4>🛡️ Défense</h4>
+                                    <div id="homeDefense" class="players-grid">
+                                        <div class="player">
+                                            <span class="player-number">2</span>
+                                            <span class="player-name">Walker</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">4</span>
+                                            <span class="player-name">Dias</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">3</span>
+                                            <span class="player-name">Akanji</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">5</span>
+                                            <span class="player-name">Gómez</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="players-section">
+                                    <h4>🎯 Milieu</h4>
+                                    <div id="homeMidfield" class="players-grid">
+                                        <div class="player">
+                                            <span class="player-number">6</span>
+                                            <span class="player-name">Rodri</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">8</span>
+                                            <span class="player-name">Gündoğan</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">25</span>
+                                            <span class="player-name">De Bruyne</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="players-section">
+                                    <h4>⚡ Attaque</h4>
+                                    <div id="homeAttack" class="players-grid">
+                                        <div class="player scorer">
+                                            <span class="player-number">9</span>
+                                            <span class="player-name">Haaland</span>
+                                            <span class="player-goals">⚽ 2</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">7</span>
+                                            <span class="player-name">Grealish</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">17</span>
+                                            <span class="player-name">Foden</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field-diagram">
+                            <h3>Terrain de jeu</h3>
+                            <svg viewBox="0 0 200 300" class="field">
+                                <!-- Field background -->
+                                <rect width="200" height="300" fill="#2d5a2d" stroke="#fff" stroke-width="2"/>
+                                <!-- Center line -->
+                                <line x1="100" y1="0" x2="100" y2="300" stroke="#fff" stroke-width="1"/>
+                                <!-- Center circle -->
+                                <circle cx="100" cy="150" r="20" fill="none" stroke="#fff" stroke-width="1"/>
+                                <!-- Center spot -->
+                                <circle cx="100" cy="150" r="2" fill="#fff"/>
+                                <!-- Penalty areas -->
+                                <rect x="30" y="0" width="140" height="40" fill="none" stroke="#fff" stroke-width="1"/>
+                                <rect x="30" y="260" width="140" height="40" fill="none" stroke="#fff" stroke-width="1"/>
+                                <!-- Goal areas -->
+                                <rect x="70" y="0" width="60" height="20" fill="none" stroke="#fff" stroke-width="1"/>
+                                <rect x="70" y="280" width="60" height="20" fill="none" stroke="#fff" stroke-width="1"/>
+                            </svg>
+                        </div>
+
+                        <div class="team-composition">
+                            <h3 id="awayTeamCompositionTitle">Real Madrid</h3>
+                            <div class="formation" id="awayFormation">4-2-3-1</div>
+                            
+                            <div class="team-players">
+                                <div class="goalkeeper-section">
+                                    <h4>🧤 Gardien</h4>
+                                    <div class="player" id="awayGK">
+                                        <span class="player-number">1</span>
+                                        <span class="player-name">Courtois</span>
+                                    </div>
+                                </div>
+
+                                <div class="players-section">
+                                    <h4>🛡️ Défense</h4>
+                                    <div id="awayDefense" class="players-grid">
+                                        <div class="player">
+                                            <span class="player-number">4</span>
+                                            <span class="player-name">Nacho</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">3</span>
+                                            <span class="player-name">Alaba</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">6</span>
+                                            <span class="player-name">Militão</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">23</span>
+                                            <span class="player-name">Carvajal</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="players-section">
+                                    <h4>🎯 Milieu</h4>
+                                    <div id="awayMidfield" class="players-grid">
+                                        <div class="player">
+                                            <span class="player-number">15</span>
+                                            <span class="player-name">Modric</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">14</span>
+                                            <span class="player-name">Valverde</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">8</span>
+                                            <span class="player-name">Kroos</span>
+                                        </div>
+                                        <div class="player">
+                                            <span class="player-number">20</span>
+                                            <span class="player-name">Vinicius Jr</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="players-section">
+                                    <h4>⚡ Attaque</h4>
+                                    <div id="awayAttack" class="players-grid">
+                                        <div class="player scorer">
+                                            <span class="player-number">9</span>
+                                            <span class="player-name">Benzema</span>
+                                            <span class="player-goals">⚽ 1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stats Tab -->
+                <section id="stats" class="tab-content">
+                    <div class="stats-container">
+                        <div class="stat-group">
+                            <div class="stat-item">
+                                <span class="stat-label">Possession</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill home" style="width: 55%">55%</div>
+                                    <div class="stat-fill away" style="width: 45%">45%</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <span class="stat-label">Tirs cadrés</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill home" style="width: 60%">6</div>
+                                    <div class="stat-fill away" style="width: 40%">4</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <span class="stat-label">Passes réussies</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill home" style="width: 58%">285</div>
+                                    <div class="stat-fill away" style="width: 42%">210</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <span class="stat-label">Corners</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill home" style="width: 50%">4</div>
+                                    <div class="stat-fill away" style="width: 50%">4</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <span class="stat-label">Cartons jaunes</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill home" style="width: 33%">2</div>
+                                    <div class="stat-fill away" style="width: 67%">4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Timeline Tab -->
+                <section id="timeline" class="tab-content">
+                    <div class="timeline">
+                        <div class="timeline-event home">
+                            <div class="timeline-time">12'</div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">⚽</div>
+                                <div class="timeline-text">
+                                    <strong>Haaland</strong><br>
+                                    Manchester City marque!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-event away">
+                            <div class="timeline-time">28'</div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">🟨</div>
+                                <div class="timeline-text">
+                                    <strong>Carton jaune</strong><br>
+                                    Nacho
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-event away">
+                            <div class="timeline-time">35'</div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">⚽</div>
+                                <div class="timeline-text">
+                                    <strong>Benzema</strong><br>
+                                    Real Madrid égalise
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-event home">
+                            <div class="timeline-time">42'</div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">⚽</div>
+                                <div class="timeline-text">
+                                    <strong>Haaland</strong><br>
+                                    Manchester City reprend l'avance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Comments Tab -->
+                <section id="comments" class="tab-content">
+                    <div class="comments-section">
+                        <div class="add-comment">
+                            <h3>Ajouter un commentaire</h3>
+                            <form id="commentForm">
+                                <input type="text" id="commentName" placeholder="Votre nom" required>
+                                <textarea id="commentText" placeholder="Votre commentaire..." required rows="4"></textarea>
+                                <button type="submit" class="btn-submit">Poster</button>
+                            </form>
+                        </div>
+
+                        <div class="comments-list">
+                            <h3>Commentaires</h3>
+                            <div id="commentsList" class="list">
+                                <!-- Commentaires seront ajoutés ici -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ligue des Champions - Détail du Match</p>
+        </footer>
+    </div>
+
+    <script src="match-detail.js"></script>
+</body>
+</html>
